@@ -22,23 +22,23 @@ function calcularMedia(atletas) {
     let nome = atletas[i].nome;
     let notas = atletas[i].notas;
 
-    //Ordena notas menor para o maior
+    // Ordena notas menor para o maior
     notasOrdenadas = notas.slice().sort(function(a, b){
       return a - b;
     });
     
-    //Elimina a maior e a menor nota
+    // Elimina a maior e a menor nota
     let notasComputadas = notasOrdenadas.slice(1, 4);
     
-    //Soma as notas válidas 
+    // Soma as notas válidas 
     let soma = notasComputadas.reduce(function(total, nota){
       return total + nota;
     }, 0);
 
-    //Calcula a média válida
+    // Calcula a média válida
     let media = soma / notasComputadas.length;
     
-    //O que será exibido no console
+    // O que será exibido no console
     console.log("Atleta: " + nome)
     console.log("Notas Obtidas: " + notas)
     console.log("Média Válida: " + media)
